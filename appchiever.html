@@ -8,23 +8,43 @@
       <h1>Appchiever</h1>
       <form class='new-task'>
         <input type='text' name='text' placeholder='Enter a new activity' />
-        <input type='radio' name='year' value='freshman'>Freshman<br>
+        <input type='radio' name='year' value='freshman' checked>Freshman<br>
         <input type='radio' name='year' value='sophomore'>Sophomore<br>
         <input type='radio' name='year' value='junior'>Junior<br>
         <input type='radio' name='year' value='senior'>Senior
       </form>
     </header>
-    <ul>
-      {{#each tasks}}
-        {{>task}}
-      {{/each}}
-    </ul>
+    <h3>Senior Year</h3>
+      <ul>
+        {{#each tasks_sen}}
+          {{>task}}
+        {{/each}}
+      </ul>
+    <h3>Junior Year</h3>
+      <ul>
+        {{#each tasks_jun}}
+          {{>task}}
+        {{/each}}
+      </ul>
+    <h3>Sophomore Year</h3>
+      <ul>
+        {{#each tasks_soph}}
+          {{>task}}
+        {{/each}}
+      </ul>
+    <h3>Freshman Year</h3>
+      <ul>
+        {{#each tasks_fresh}}
+          {{>task}}
+        {{/each}}
+      </ul>
+
   </div>
 </body>
 
 <template name='task'>
   <li class='{{#if checked}}checked{{/if}}'>
     <button class='delete'>&times;</button>
-    <span class='text'>{{text}}</span>
+    <span class='text'><strong>{{year}}</strong> - {{text}}</span>
   </li>
 </template>
