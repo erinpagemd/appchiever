@@ -1,0 +1,30 @@
+<head>
+  <title>appchiever</title>
+</head>
+
+<body>
+  <div class='container'>
+    <header>
+      <h1>Appchiever</h1>
+      <form class='new-task'>
+        <input type='text' name='text' placeholder='Enter a new activity' />
+        <input type='radio' name='year' value='freshman'>Freshman<br>
+        <input type='radio' name='year' value='sophomore'>Sophomore<br>
+        <input type='radio' name='year' value='junior'>Junior<br>
+        <input type='radio' name='year' value='senior'>Senior
+      </form>
+    </header>
+    <ul>
+      {{#each tasks}}
+        {{>task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name='task'>
+  <li class='{{#if checked}}checked{{/if}}'>
+    <button class='delete'>&times;</button>
+    <span class='text'>{{text}}</span>
+  </li>
+</template>
