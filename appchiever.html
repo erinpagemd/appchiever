@@ -7,7 +7,6 @@
     <header>
       <h1>Appchiever</h1>
       <form class='new-task'>
-        <input type='text' name='text' placeholder='Enter a new activity' />
 
         <div class='seniority'>
           <input type='radio' name='year' value='freshman' checked>Freshman<br>
@@ -15,26 +14,26 @@
           <input type='radio' name='year' value='junior'>Junior<br>
           <input type='radio' name='year' value='senior'>Senior<br>
         </div>
-
         <h4>Choose a category
           <select name='category'>
             <option value="band" selected>Band</option>
-            <option value="honor_roll">Honor Roll</option>
+            <option value="honorroll">Honor Roll</option>
             <option value="intern">Internship</option>
             <option value="co-op">Co-op</option>
             <option value="volunteer">Volunteer</option>
             <option value="society">Society</option>
             <option value="award">Award</option>
+            <option value="theatre">Theatre</option>
             <option value="sports">Sports</option>
-            <option value="sports">Sports</option>
-            <option value="sports">Sports</option>
-            <option value="sports">Sports</option>
+            <option value="club">Club</option>
+            <option value="sga">Student Government</option>
             <option value="sports">Sports</option>
             <option value="sports">Sports</option>
             <option value="sports">Sports</option>
             <option value="sports">Sports</option>
           </select>
         </h4>
+        <input type='text' name='text' placeholder='Enter a new activity' />
       </form>
     </header>
     <h3>Senior Year</h3>
@@ -68,6 +67,6 @@
 <template name='task'>
   <li class='{{#if checked}}checked{{/if}}'>
     <button class='delete'>&times;</button>
-    <span class='text'>{{text}}</span>
+    <span class='text'>{{category}} + {{text}}</span>
   </li>
 </template>

@@ -22,12 +22,12 @@ if (Meteor.isClient) {
     "submit .new-task": function(event){
       var text = event.target.text.value;
       var year = $(event.target).find('[name=year]:checked').val();
-
-        console.log(text);
+      var category = $(event.target).find('option:selected').val();
 
       Tasks.insert({
         text: text,
         year: year,
+        category: category,
         createdAt: new Date()
       });
 
