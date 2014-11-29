@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+
 /* CSS declarations go here */
 /* CSS declarations go here */
 body {
@@ -16,6 +18,10 @@ body {
   margin: 0;
 
   font-size: 14px;
+}
+
+.new-task{
+  border: dashed;
 }
 
 .container {
@@ -37,7 +43,9 @@ header {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-family: 'Rock Salt', cursive;
+  align: center;
+  font-size: 2em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
